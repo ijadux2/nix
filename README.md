@@ -7,13 +7,14 @@
 ![NixVim](https://img.shields.io/badge/NixVim-57A143?style=for-the-badge&logo=vim&logoColor=white)
 ![Flakes](https://img.shields.io/badge/Flakes-7E7EFF?style=for-the-badge&logo=nix&logoColor=white)
 
-*A declarative, reproducible, and beautifully configured NixOS setup with Home Manager and NixVim integration.*
+_A declarative, reproducible, and beautifully configured NixOS setup with Home Manager and NixVim integration._
 
 </div>
 
 ## ✨ Features
 
 ### 🖥️ System Configuration
+
 - **NixOS Unstable** with experimental features enabled
 - **Flakes-based** setup for reproducibility
 - **Home Manager** integration for user-level configuration
@@ -22,6 +23,7 @@
 - **Hyprland** window manager (if configured)
 
 ### 🛠️ Development Environment
+
 - **Multi-language support**: Nix, Python, TypeScript/JavaScript, Lua, C/C++, Shell, Web
 - **LSP servers** configured for intelligent code completion
 - **Formatters** for consistent code style
@@ -31,6 +33,7 @@
 - **React Native** development environment
 
 ### 🎨 User Experience
+
 - **Catppuccin** theme system-wide
 - **Nerd Fonts** for beautiful terminal rendering
 - **Modern CLI tools**: `eza`, `ripgrep`, `bat`, `btop`
@@ -64,18 +67,21 @@ nix/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - NixOS with Flakes enabled
 - Basic understanding of Nix configuration
 
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
-   git clone <repository-url> ~/nixos-config
-   cd ~/nixos-config
+   git clone https://github.com/ijadux2/nix.git
+   cd ~/nix
    ```
 
 2. **Update the system:**
+
    ```bash
    sudo nixos-rebuild switch --flake .#itachi
    ```
@@ -87,17 +93,19 @@ nix/
 
 ### Useful Commands
 
-| Command | Description |
-|---------|-------------|
-| `sudo nixos-rebuild switch --flake .#itachi` | Rebuild system configuration |
-| `home-manager switch` | Update Home Manager configuration |
-| `sudo nix-collect-garbage -d` | Clean up old generations |
-| `nix flake update` | Update flake inputs |
+| Command                                      | Description                       |
+| -------------------------------------------- | --------------------------------- |
+| `sudo nixos-rebuild switch --flake .#itachi` | Rebuild system configuration      |
+| `home-manager switch`                        | Update Home Manager configuration |
+| `sudo nix-collect-garbage -d`                | Clean up old generations          |
+| `nix flake update`                           | Update flake inputs               |
 
 ## ⚙️ Configuration Details
 
 ### System Packages
+
 The system includes essential packages for:
+
 - **Development**: `git`, `curl`, `wget`, `cmake`, `ninja`
 - **Desktop Environment**: `kitty`, `waybar`, `hyprlock`
 - **Multimedia**: `mpv`, `chromium`, `brave`
@@ -105,7 +113,9 @@ The system includes essential packages for:
 - **React Native**: `nodejs_24`, `watchman`
 
 ### User Packages
+
 Home Manager provides:
+
 - **Development Tools**: `vscodium`, `flutter`, `gh`
 - **CLI Enhancements**: `eza`, `ripgrep`, `bat`, `btop`
 - **File Management**: `yazi`, `thunar` with plugins
@@ -113,13 +123,16 @@ Home Manager provides:
 - **Rust Development**: `rustc`, `cargo`, `rust-analyzer`
 
 ### Shell Configuration
+
 Zsh is configured with:
+
 - **Oh My Zsh** with `git` and `sudo` plugins
 - **Extensive aliases** for productivity
 - **Autosuggestions** and **syntax highlighting**
 - **Zoxide** for smart directory navigation
 
 ### Key Aliases
+
 ```bash
 # File operations
 ll="ls -l"           # Detailed listing
@@ -144,6 +157,7 @@ clean="sudo nix-collect-garbage -d"    # Clean up
 The Neovim setup includes:
 
 ### 🌟 Core Features
+
 - **Catppuccin** color scheme
 - **LSP** support for multiple languages
 - **Treesitter** for syntax highlighting
@@ -151,6 +165,7 @@ The Neovim setup includes:
 - **Git integration** with Gitsigns
 
 ### 📦 Language Support
+
 - **Nix**: `nil_ls` with `nixfmt`
 - **Python**: `pyright` with `black` and `isort`
 - **TypeScript/JavaScript**: `ts_ls` with `prettier`
@@ -160,6 +175,7 @@ The Neovim setup includes:
 - **Web**: `cssls`, `jsonls`, `html`
 
 ### 🔧 Editor Features
+
 - **Auto-completion** with NVI-CMP
 - **Auto-pairs** for brackets
 - **Color highlighting** in code
@@ -170,6 +186,7 @@ The Neovim setup includes:
 ## 🎨 Theming
 
 The configuration uses **Catppuccin Mocha** as the primary theme:
+
 - System-wide Catppuccin integration
 - Matching GTK theme
 - Consistent color palette across applications
@@ -178,10 +195,12 @@ The configuration uses **Catppuccin Mocha** as the primary theme:
 ## 🔧 Customization
 
 ### Adding New Packages
+
 1. **System packages**: Edit `modules/sys-pkgs.nix`
 2. **User packages**: Edit `home/pkgs.nix`
 
 ### Adding New LSP Servers
+
 Edit `home/jadu.nix` in the `plugins.lsp.servers` section:
 
 ```nix
@@ -194,6 +213,7 @@ your_language = {
 ```
 
 ### Adding New Vim Plugins
+
 Edit `home/nix/plugins.nix`:
 
 ```nix
@@ -203,6 +223,7 @@ your_plugin.enable = true;
 ## 🤝 Contributing
 
 Feel free to:
+
 - 🐛 Report issues
 - 💡 Suggest improvements
 - 📝 Submit pull requests
@@ -226,6 +247,7 @@ This configuration is provided as-is for educational and personal use.
 
 **Made with ❤️ using Nix**
 
-*"In Nix we trust"*
+_"In Nix we trust"_
 
 </div>
+
