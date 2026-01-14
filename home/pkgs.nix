@@ -2,6 +2,7 @@
 {
 
   home.packages = with pkgs; [
+    pipes-rs
     gtk3
     gtk4
     webkitgtk_4_1

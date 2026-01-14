@@ -52,6 +52,7 @@
       fa = "fastfetch";
       th = "thunar";
       gp = "git push";
+      pip = "pipes-rs";
     };
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
