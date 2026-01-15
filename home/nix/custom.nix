@@ -83,7 +83,7 @@
         sign_priority = 8;
         keywords = {
           FIX = {
-            icon = " ";
+            icon = "󰁨";
             color = "error";
             alt = [
               "FIXME"
@@ -93,7 +93,7 @@
             ];
           };
           TODO = {
-            icon = " ";
+            icon = "";
             color = "info";
           };
           HACK = {
@@ -101,7 +101,7 @@
             color = "warning";
           };
           WARN = {
-            icon = " ";
+            icon = "󰯆";
             color = "warning";
             alt = [
               "WARNING"
@@ -109,7 +109,7 @@
             ];
           };
           PERF = {
-            icon = " ";
+            icon = "󱩢";
             alt = [
               "OPTIM"
               "PERFORMANCE"
@@ -117,7 +117,7 @@
             ];
           };
           NOTE = {
-            icon = " ";
+            icon = "";
             color = "hint";
             alt = [ "INFO" ];
           };
