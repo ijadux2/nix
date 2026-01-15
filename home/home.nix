@@ -57,10 +57,13 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initContent = ''
-       eval "$(zoxide init zsh)"
+      autoload -U colors && colors
+      setopt PROMPT_SUBST
+      eval "$(zoxide init zsh)"
+      export PS1='%F{#b4befe}  %F{#b4befe}%~%f %F{#b4befe}❯%f '
       export NIXPKGS_ALLOW_UNFREE=1
-       CHROME_EXECUTABLE="/etc/profiles/per-user/jadu/bin/chromium
-       GOOGLE_CHROME="/etc/profiles/per-user/jadu/bin/chromium
+      CHROME_EXECUTABLE="/etc/profiles/per-user/jadu/bin/chromium
+      GOOGLE_CHROME="/etc/profiles/per-user/jadu/bin/chromium
     '';
     # zsh prompt =  export PS1="%{%F{243}%}%n%{%F{245}%}@%{%F{249}%}%m %{%F{254}%}%1~ %{%f%}$ "
   };
