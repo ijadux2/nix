@@ -3,6 +3,8 @@
 
   home.packages = with pkgs; [
     fish
+    nemo
+    libblake3
     ghostty
     pipes-rs
     gtk3

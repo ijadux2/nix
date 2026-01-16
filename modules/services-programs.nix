@@ -43,6 +43,16 @@
     upower.enable = true;
   };
 
+  services.ollama = {
+    enable = true;
+    package = pkgs.ollama-vulkan;
+  };
+
+  services.open-webui = {
+    enable = true;
+    port = 8080;
+  };
+
   # Enable networking for Noctalia
   networking.networkmanager.enable = true;
 
