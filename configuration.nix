@@ -21,8 +21,8 @@
     ];
   };
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1"; # Force Electron apps (OpenCode) to use Wayland
-    WLR_NO_HARDWARE_CURSORS = "1"; # Fixes disappearing cursor in Hyprland
+    NIXOS_OZONE_WL = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
   };
   nixpkgs.config.allowUnfree = true;
   users.users.jadu = {

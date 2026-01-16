@@ -2,6 +2,8 @@
 {
 
   home.packages = with pkgs; [
+    fish
+    ghostty
     pipes-rs
     gtk3
     gtk4

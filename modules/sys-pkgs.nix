@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     gnome-keyring
+    zig
     vim
     xdg-utils
     wget

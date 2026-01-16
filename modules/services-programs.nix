@@ -39,6 +39,11 @@
     libinput.enable = true;
     blueman.enable = true;
     flatpak.enable = true;
+    power-profiles-daemon.enable = true;
+    upower.enable = true;
   };
+
+  # Enable networking for Noctalia
+  networking.networkmanager.enable = true;
 
 }
