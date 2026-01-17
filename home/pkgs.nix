@@ -2,7 +2,9 @@
 {
 
   home.packages = with pkgs; [
+    feh
     fish
+    dunst
     cool-retro-term
     nemo
     libblake3
