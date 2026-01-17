@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     fish
+    cool-retro-term
     nemo
     libblake3
     ghostty
@@ -113,6 +114,11 @@
     yt-dlp
     video-downloader
     mpv-handler
+
+    # Awesome-wm related packages
+    rofi
+    picom
+    cliphist
   ];
 
 }

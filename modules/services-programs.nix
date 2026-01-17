@@ -9,6 +9,14 @@
     variant = "";
   };
 
+  # Enable awesome-wm window manager
+  services.xserver.windowManager.awesome = {
+    enable = true;
+    luaModules = with pkgs.luaPackages; [
+      lgi
+    ];
+  };
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

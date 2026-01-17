@@ -62,5 +62,18 @@
     nodejs_24
     nodePackages.npm
     watchman
+
+    # Awesome-wm packages
+    awesome
+    luajit
+    xorg.xrandr
+    xorg.xsetroot
+    xdotool
+    feh
+    slock
+    luaPackages.lgi
+    xcompmgr
+    transset
+    xkill
   ];
 }
