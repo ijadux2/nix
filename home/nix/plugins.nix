@@ -18,6 +18,35 @@
     illuminate.enable = true;
     nui.enable = true;
     nvim-notify.enable = true;
+    indent-blankline = {
+      enable = true;
+      settings = {
+        scope = {
+          enabled = true;
+          show_start = false;
+          show_end = false;
+        };
+        indent = {
+          char = "│";
+          tab_char = "│";
+        };
+        exclude = {
+          filetypes = [
+            "help"
+            "alpha"
+            "dashboard"
+            "neo-tree"
+            "Trouble"
+            "trouble"
+            "lazy"
+            "mason"
+            "notify"
+            "toggleterm"
+            "lazyterm"
+          ];
+        };
+      };
+    };
 
     # Comment.nvim
     comment.enable = true;
