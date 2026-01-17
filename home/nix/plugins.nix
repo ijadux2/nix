@@ -4,7 +4,23 @@
   programs.nixvim.plugins = {
     # UI Plugins
     web-devicons.enable = true;
-    lualine.enable = true;
+    lualine = {
+      enable = true;
+      settings = {
+        options = {
+          theme = "catppuccin";
+          icons_enabled = true;
+          section_separators = {
+            left = "";
+            right = "";
+          };
+          component_separators = {
+            left = "";
+            right = "";
+          };
+        };
+      };
+    };
     bufferline.enable = true;
     which-key.enable = true;
 
