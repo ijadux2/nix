@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     gnome-keyring
+    distrobox
     ollama
     zig
     vim

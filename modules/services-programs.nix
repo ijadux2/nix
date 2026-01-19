@@ -56,6 +56,11 @@
     port = 8080;
   };
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true; # Allow distrobox to use 'docker' alias if needed
+  };
+
   # Enable networking for Noctalia
   networking.networkmanager.enable = true;
 

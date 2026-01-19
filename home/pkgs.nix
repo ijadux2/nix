@@ -3,6 +3,12 @@
 
   home.packages = with pkgs; [
     feh
+    glibc
+    python313
+    python313Packages.pyqt5
+    python313Packages.pip
+    fzf
+    glibmm
     fish
     dunst
     cool-retro-term

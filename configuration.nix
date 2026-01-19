@@ -33,6 +33,7 @@
       "networkmanager"
       "wheel"
       "adbusers"
+      "podman"
     ];
   };
   system.stateVersion = "25.11";

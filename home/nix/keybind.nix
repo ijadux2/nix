@@ -76,6 +76,12 @@
     }
     {
       mode = "n";
+      key = "<leader>r";
+      action.__raw = "function() require('telescope.builtin').oldfiles() end";
+      options.desc = "Recent files";
+    }
+    {
+      mode = "n";
       key = "<leader>|";
       action = "<CMD>vsplit<CR>";
       options.desc = "Split Right";
