@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     feh
+    nautilus
     glibc
     python313
     python313Packages.pyqt5

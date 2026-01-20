@@ -52,7 +52,6 @@
       fa = "fastfetch";
       th = "thunar";
       gp = "git push";
-      pip = "pipes-rs";
       ai = "ollama run phi3";
     };
     autosuggestion.enable = true;
