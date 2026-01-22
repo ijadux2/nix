@@ -128,5 +128,8 @@
     # Formatting and linting
     conform-nvim.enable = true;
     nvim-lint.enable = true;
+
+    # Auto-completion enhancement plugins
+    nvim-cmp.enable = true;
   };
 }

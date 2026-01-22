@@ -3,6 +3,9 @@
 
   home.packages = with pkgs; [
     feh
+    brightnessctl
+    tty-clock
+    clock-rs
     nautilus
     glibc
     python313

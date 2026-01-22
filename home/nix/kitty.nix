@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+# this is my kitty config in nix
+# right now i dont use this if you want then
+# just add this file in @jadu.nix as import-modlue
+
 {
   programs.kitty = {
     enable = true;

@@ -75,6 +75,86 @@
       config.close_if_last_window = true;
     };
 
+    # Rust-specific plugins with enhanced auto-completion
+    rustaceanvim = {
+      enable = true;
+      settings = {
+        server = {
+          default_settings = {
+            rust-analyzer = {
+              cargo = {
+                allFeatures = true;
+              };
+              check = {
+                command = "clippy";
+                extraArgs = [
+                  "--all-targets"
+                  "--all-features"
+                ];
+              };
+              procMacro = {
+                enable = true;
+              };
+              completion = {
+                # Enhanced auto-completion settings
+                addCallParentheses = true;
+                addCallSnippet = "replace";
+                autoimport = {
+                  enable = true;
+                };
+                postfix = {
+                  enable = true;
+                };
+                private = {
+                  enable = true;
+                };
+                public = {
+                  enable = true;
+                };
+              };
+              inlayHints = {
+                bindingModeHints = {
+                  enable = true;
+                };
+                chainingHints = {
+                  enable = true;
+                };
+                closingBraceHints = {
+                  enable = true;
+                  minLines = 25;
+                };
+                discriminantHints = {
+                  enable = true;
+                };
+                expressionAdjustmentHints = {
+                  enable = true;
+                };
+                implicitDrops = {
+                  enable = true;
+                };
+                lifetimeElisionHints = {
+                  enable = "skip_trivial";
+                  useParameterNames = true;
+                };
+                maxLength = 25;
+                parameterHints = {
+                  enable = true;
+                };
+                reborrowHints = {
+                  enable = "mutable";
+                };
+                renderColon = true;
+                typeHints = {
+                  enable = true;
+                  hideNamedConstructor = false;
+                };
+              };
+            };
+          };
+        };
+      };
+    };
+
     # Todo-comments customizations with LSP integration
     todo-comments = {
       enable = true;
@@ -197,5 +277,47 @@
         use_diagnostic_signs = true;
       };
     };
+
+    # Enhanced auto-completion configuration through NixVim
+    extraConfigLua = ''
+      -- Enhanced completion settings
+      vim.opt.completeopt = 'menu,menuone,noinsert'
+      vim.opt.shortmess = vim.opt.shortmess + 'c'
+
+      -- Auto-trigger completion when typing
+      local cmp = require('cmp')
+
+      vim.api.nvim_create_autocmd('TextChangedI', {
+        callback = function()
+          vim.schedule(function()
+            if vim.fn.mode() == 'i' and not cmp.visible() then
+              local line = vim.api.nvim_get_current_line()
+              local col = vim.api.nvim_win_get_cursor(0)[2]
+              
+              -- Trigger if we have at least 1 character
+              if col > 0 then
+                local text_before_cursor = line:sub(1, col):gsub("%s*$", "")
+                if #text_before_cursor > 0 then
+                  cmp.complete()
+                end
+              end
+            end
+          end)
+        end,
+      })
+
+      -- Also trigger on InsertEnter
+      vim.api.nvim_create_autocmd('InsertEnter', {
+        callback = function()
+          vim.schedule(function()
+            if not cmp.visible() then
+              cmp.complete()
+            end
+          end)
+        end,
+      })
+
+      print('Enhanced NixVim auto-completion loaded!')
+    '';
   };
 }

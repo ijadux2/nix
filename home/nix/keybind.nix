@@ -143,5 +143,49 @@
       options.desc = "Increase Window Width";
     }
 
+    # Rust-specific keybindings
+    {
+      mode = "n";
+      key = "<leader>rr";
+      action = "<cmd>RustRunnables<cr>";
+      options.desc = "Rust runnables";
+    }
+    {
+      mode = "n";
+      key = "<leader>rd";
+      action = "<cmd>RustDebuggables<cr>";
+      options.desc = "Rust debuggables";
+    }
+    {
+      mode = "n";
+      key = "<leader>rt";
+      action = "<cmd>RustTest<cr>";
+      options.desc = "Rust test";
+    }
+    {
+      mode = "n";
+      key = "<leader>rm";
+      action = "<cmd>RustExpandMacro<cr>";
+      options.desc = "Rust expand macro";
+    }
+    {
+      mode = "n";
+      key = "<leader>rh";
+      action = "<cmd>RustHoverActions<cr>";
+      options.desc = "Rust hover actions";
+    }
+    {
+      mode = "n";
+      key = "<leader>rc";
+      action = "<cmd>RustOpenCargo<cr>";
+      options.desc = "Open Cargo.toml";
+    }
+    {
+      mode = "n";
+      key = "<leader>rp";
+      action = "<cmd>RustParentModule<cr>";
+      options.desc = "Rust parent module";
+    }
+
   ];
 }

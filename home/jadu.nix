@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 
@@ -123,6 +122,11 @@
 
           # Vim
           vimls.enable = true;
+
+          # Rust - handled by rustaceanvim
+          rust_analyzer = {
+            enable = false;
+          };
         };
       };
 
@@ -149,6 +153,7 @@
             sh = [ "shfmt" ];
             cpp = [ "clang-format" ];
             c = [ "clang-format" ];
+            rust = [ "rustfmt" ];
           };
           format_on_save = {
             timeout_ms = 500;
