@@ -100,6 +100,7 @@
           cssls.enable = true;
           jsonls.enable = true;
           html.enable = true;
+          zls.enable = true;
 
           # C/C++
           clangd = {
@@ -136,6 +137,7 @@
         settings = {
           formatters_by_ft = {
             nix = [ "nixfmt" ];
+            zig = [ "zigfmt" ];
             python = [
               "black"
               "isort"

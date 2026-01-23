@@ -3,6 +3,7 @@
 
   home.packages = with pkgs; [
     feh
+    zls
     go
     tuios
     brightnessctl

@@ -75,6 +75,10 @@
       config.close_if_last_window = true;
     };
 
+    zig = {
+      enable = true;
+    };
+
     # Rust-specific plugins with enhanced auto-completion
     rustaceanvim = {
       enable = true;
