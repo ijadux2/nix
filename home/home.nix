@@ -61,12 +61,13 @@
       setopt PROMPT_SUBST
       eval "$(zoxide init zsh)"
       # Define the hex color
-      prompt_color="#b4befe"
+      #prompt_color="#b4befe"
       # Set the prompt to exactly [user@host:path]$ 
-      PROMPT='%F{$prompt_color}[%n@%m:%~]$ %f'
+      #PROMPT='%F{$prompt_color}[%n@%m:%~]$ %f'
       export NIXPKGS_ALLOW_UNFREE=1
       CHROME_EXECUTABLE="/etc/profiles/per-user/jadu/bin/chromium
       GOOGLE_CHROME="/etc/profiles/per-user/jadu/bin/chromium
+      export PS1="%{%F{243}%}%n%{%F{245}%}@%{%F{249}%}%m %{%F{254}%}%1~ %{%f%}$ "
     '';
     # zsh prompt =  export PS1="%{%F{243}%}%n%{%F{245}%}@%{%F{249}%}%m %{%F{254}%}%1~ %{%f%}$ "
   };

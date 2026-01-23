@@ -3,6 +3,8 @@
 
   home.packages = with pkgs; [
     feh
+    go
+    tuios
     brightnessctl
     tty-clock
     clock-rs
@@ -16,7 +18,6 @@
     fish
     dunst
     cool-retro-term
-    nemo
     libblake3
     ghostty
     pipes-rs

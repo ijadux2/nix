@@ -89,6 +89,7 @@
         bash
         vim
         vimdoc
+        nu
         # Additional languages
         rust
         go
